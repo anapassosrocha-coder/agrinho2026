@@ -3,76 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descarte Correto de Embalagens de Defensivos Agrícolas</title>
+    <meta name="description" content="Guia prático sobre logística reversa e descarte correto de embalagens de defensivos agrícolas">
+    <title>Logística Reversa no Campo - Agrinho 2026</title>
     <style>
-        :root {
-            --primary-color: #2e7d32;
-            --secondary-color: #388e3c;
-            --accent-color: #d32f2f;
-            --bg-color: #f4f6f4;
-            --text-color: #333;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
+            background-color: #f4f6f4;
         }
 
+        /* HEADER */
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            width: 100%;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            margin-bottom: 1rem;
         }
 
+        .badge {
+            display: inline-block;
+            background: #d32f2f;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* MAIN */
         main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
 
+        /* CARDS */
         .card {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
             margin-bottom: 2rem;
+            border-top: 5px solid #388e3c;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
         }
 
         h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 0.5rem;
+            color: #2e7d32;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.8rem;
         }
 
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* PASSOS */
         .passos {
             list-style: none;
+            padding: 0;
         }
 
         .passos li {
             position: relative;
-            padding-left: 2.5rem;
-            margin-bottom: 1.5rem;
+            padding-left: 3.5rem;
+            margin-bottom: 2rem;
+            padding-top: 0.5rem;
         }
 
         .passos li::before {
@@ -80,53 +110,232 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
             color: white;
-            width: 1.8rem;
-            height: 1.8rem;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 50%;
             text-align: center;
-            line-height: 1.8rem;
+            line-height: 2.2rem;
             font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        .alerta {
-            background-color: #ffebee;
-            border-left: 5px solid var(--accent-color);
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-        }
-
-        .alerta h4 {
-            color: var(--accent-color);
+        .passos li strong {
+            color: #388e3c;
+            font-size: 1.1rem;
+            display: block;
             margin-bottom: 0.5rem;
         }
 
+        .passos li em {
+            color: #d32f2f;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        /* LISTAS */
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+
+        ul li strong {
+            color: #388e3c;
+        }
+
+        /* GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .grid-item {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #388e3c;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .grid-item h3 {
+            color: #2e7d32;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .grid-item p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ALERTA */
+        .alerta {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 5px solid #d32f2f;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(211,47,47,0.1);
+        }
+
+        .alerta h4 {
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .alerta p {
+            color: #c62828;
+            margin: 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1976d2;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box p {
+            color: #0d47a1;
+            margin: 0;
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: #333;
+            padding: 2.5rem 1rem;
+            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
             color: white;
             margin-top: 4rem;
+            border-top: 3px solid #388e3c;
+            width: 100%;
         }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        footer strong {
+            color: #388e3c;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .passos li {
+                padding-left: 3rem;
+            }
+
+            .passos li::before {
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            ul {
+                margin-left: 1rem;
+            }
+        }
+
+        /* ANIMAÇÕES */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Logística Reversa no Campo</h1>
+        <h1>🌾 Logística Reversa no Campo</h1>
         <p>Guia Prático para o Descarte de Embalagens de Defensivos Agrícolas</p>
+        <div class="badge">Lei nº 9.974/00 - Responsabilidade Compartilhada</div>
     </header>
 
     <main>
         <section class="card">
-            <h2>Por que o descarte correto é obrigatório?</h2>
+            <h2>🎯 Por que o descarte correto é obrigatório?</h2>
             <p>O descarte inadequado de embalagens de agroquímicos (venenos/defensivos) traz graves riscos de contaminação do solo, dos recursos hídricos e da saúde humana. No Brasil, a Lei nº 9.974/00 determina a responsabilidade compartilhada entre agricultores, canais de venda e indústrias para o retorno desses materiais.</p>
+            
+            <div class="info-box">
+                <p><strong>📋 Riscos Principais:</strong> Contaminação de aquíferos, danos ao ecossistema, problemas de saúde e penalidades legais.</p>
+            </div>
         </section>
 
         <section class="card">
-            <h2>O Passo a Passo no Campo</h2>
+            <h2>📍 O Passo a Passo no Campo</h2>
+            <p>Siga rigorosamente estas etapas para garantir o descarte adequado:</p>
             <ul class="passos">
                 <li data-step="1">
                     <strong>Tríplice Lavagem ou Lavagem sob Pressão:</strong>
@@ -138,7 +347,7 @@
                 </li>
                 <li data-step="3">
                     <strong>Armazenamento Temporário:</strong>
-                    Guarde as embalagens lavadas e suas respectivas tampas (separadas) em um dep��sito nas propriedades rurais. Esse local deve ser fechado, ventilado e seguro, longe de animais e alimentos.
+                    Guarde as embalagens lavadas e suas respectivas tampas (separadas) em um depósito nas propriedades rurais. Esse local deve ser fechado, ventilado e seguro, longe de animais e alimentos.
                 </li>
                 <li data-step="4">
                     <strong>Devolução:</strong>
@@ -148,42 +357,67 @@
         </section>
 
         <section class="card">
-            <h2>Tipos de Embalagens</h2>
-            <p><strong>Embalagens Laváveis:</strong> São as rígidas (plásticas ou metálicas) que contêm produtos que usam água no preparo da calda. Devem passar obrigatoriamente pelo processo de lavagem.</p>
-            <br>
-            <p><strong>Embalagens Não Laváveis:</strong> São sacos plásticos, papelão e outras embalagens flexíveis que devem ser devolvidas sem qualquer processo de limpeza, apenas vazias.</p>
-        </section>
-
-        <section class="card">
-            <h2>Centros de Recebimento</h2>
-            <p>Procure pelo centro de recebimento mais próximo de sua propriedade. Geralmente estão localizados em:</p>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-                <li>Lojas de insumos agrícolas</li>
-                <li>Postos de recolhimento</li>
-                <li>Cooperativas agrícolas</li>
-                <li>Distribuidoras de defensivos</li>
-            </ul>
-            <div class="alerta">
-                <h4>⚠️ Importante</h4>
-                <p>Verifique a localização na nota fiscal de compra ou consulte o fabricante do produto.</p>
+            <h2>📦 Tipos de Embalagens</h2>
+            
+            <div class="grid-2">
+                <div class="grid-item">
+                    <h3>✅ Embalagens Laváveis</h3>
+                    <p>São as rígidas (plásticas ou metálicas) que contêm produtos que usam água no preparo da calda. <strong>Devem passar obrigatoriamente</strong> pelo processo de tríplice lavagem antes da devolução.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>⚠️ Embalagens Não Laváveis</h3>
+                    <p>Sacos plásticos, papelão e outras embalagens flexíveis que devem ser devolvidas sem qualquer processo de limpeza, apenas vazias e bem acondicionadas.</p>
+                </div>
             </div>
         </section>
 
         <section class="card">
-            <h2>Consequências do Descarte Incorreto</h2>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-                <li><strong>Contaminação de aquíferos</strong> e recursos hídricos</li>
-                <li><strong>Danos à fauna e flora</strong> local</li>
-                <li><strong>Problemas de saúde</strong> em pessoas e animais</li>
-                <li><strong>Penalidades legais</strong> ao produtor</li>
-                <li><strong>Impacto ambiental</strong> de longo prazo</li>
+            <h2>🏪 Centros de Recebimento</h2>
+            <p>Procure pelo centro de recebimento mais próximo de sua propriedade. Geralmente estão localizados em:</p>
+            <ul>
+                <li>🏬 Lojas de insumos agrícolas</li>
+                <li>📍 Postos de recolhimento especializados</li>
+                <li>🤝 Cooperativas agrícolas</li>
+                <li>🚚 Distribuidoras de defensivos</li>
+                <li>🏛️ Sindicatos rurais</li>
             </ul>
+            <div class="alerta">
+                <h4>⚠️ Importante</h4>
+                <p>Verifique a localização exata na nota fiscal de compra ou consulte o fabricante do produto. Você também pode ligar para a cooperativa ou sindicato agrícola da sua região.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🚫 Consequências do Descarte Incorreto</h2>
+            <p>Descartar incorretamente embalagens de defensivos agrícolas pode resultar em:</p>
+            
+            <div class="grid-2">
+                <div class="grid-item">
+                    <h3 style="color: #d32f2f;">⚡ Ambientais</h3>
+                    <ul>
+                        <li><strong>Contaminação de aquíferos</strong> e recursos hídricos</li>
+                        <li><strong>Morte de fauna e flora</strong> local</li>
+                        <li><strong>Degradação de solos</strong> produtivos</li>
+                        <li><strong>Impacto de longo prazo</strong> no ecossistema</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3 style="color: #f57c00;">📋 Legais e Sanitárias</h3>
+                    <ul>
+                        <li><strong>Multas pesadas</strong> ao produtor</li>
+                        <li><strong>Responsabilidades judiciais</strong> civis</li>
+                        <li><strong>Problemas de saúde</strong> humana e animal</li>
+                        <li><strong>Proibição de comercialização</strong> de produtos</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Agrinho | Descarte Correto de Embalagens de Defensivos Agrícolas</p>
-        <p>Lei nº 9.974/00 - Responsabilidade Compartilhada</p>
+        <p><strong>🌍 Agrinho 2026</strong> - Descarte Correto de Embalagens de Defensivos Agrícolas</p>
+        <p>📜 Lei nº 9.974/00 - Responsabilidade Compartilhada na Logística Reversa</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 - Todos os direitos reservados | Desenvolvido para conscientização ambiental</p>
     </footer>
 
 </body>
